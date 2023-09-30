@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Deer, barasingha",
+      "type": "antiquities",
+      "description": "libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas",
+      "owner": "Cathie Oxby",
+      "date": "2/7/2023",
+      "location": "Cururupu",
+      "image": "https://picsum.photos/500"
+    },
+    {
+      "id": 2,
+      "name": "Buffalo, asian water",
+      "type": "art",
+      "description": "mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh",
+      "owner": "Ninnetta Gatehouse",
+      "date": "10/7/2022",
+      "location": "Shahrud",
+      "image": "https://picsum.photos/500"
+    },
+    {
+      "id": 3,
+      "name": "Bennett's wallaby",
+      "type": "antiquities",
+      "description": "dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit",
+      "owner": "Cobbie Goslin",
+      "date": "9/9/2023",
+      "location": "Cartagena",
+      "image": "https://picsum.photos/500"
+    },
+    {
+      "id": 4,
+      "name": "Red-billed buffalo weaver",
+      "type": "art",
+      "description": "ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum",
+      "owner": "Letty Haps",
+      "date": "10/7/2022",
+      "location": "Ipoh",
+      "image": "https://picsum.photos/500"
+    },
+    {
+      "id": 5,
+      "name": "Egyptian vulture",
+      "type": "art",
+      "description": "leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede",
+      "owner": "Lyle Aluard",
+      "date": "9/24/2023",
+      "location": "Emiliano Zapata",
+      "image": "https://picsum.photos/500"
+    },
+    {
+      "id": 6,
+      "name": "Kafue flats lechwe",
+      "type": "jewelry",
+      "description": "sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque",
+      "owner": "Abie Demange",
+      "date": "5/28/2023",
+      "location": "Kabukarudi",
+      "image": "https://picsum.photos/500"
+    },
+    {
+      "id": 7,
+      "name": "Eagle, long-crested hawk",
+      "type": "jewelry",
+      "description": "cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales",
+      "owner": "Francyne Pacey",
+      "date": "9/22/2023",
+      "location": "Xingdian",
+      "image": "https://picsum.photos/500"
+    },
+    {
+      "id": 8,
+      "name": "Common palm civet",
+      "type": "art",
+      "description": "in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum",
+      "owner": "Marietta Gianneschi",
+      "date": "2/18/2023",
+      "location": "Chenghuang",
+      "image": "https://picsum.photos/500"
+    },
+    {
+      "id": 9,
+      "name": "Snake-necked turtle",
+      "type": "antiquities",
+      "description": "tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec",
+      "owner": "Ermengarde Casari",
+      "date": "3/15/2023",
+      "location": "Gävle",
+      "image": "https://picsum.photos/500"
+    }
+  ]
+}

@@ -21,6 +21,7 @@ const props = defineProps({
 const items = ref<Array<IAuctionItem>>([])
 const totalItem = ref<number>(0)
 const itemPerPage = ref<Number>(props.perPage || 3)
+const searchWithPrice = ref<Boolean>(false)
 
 const router = useRouter()
 const searchTerm = ref<string>('')
@@ -29,6 +30,28 @@ const hasNextPage = computed(() => {
    const totalPages = Math.ceil(totalItem.value / props.perPage)
    return props.page?.valueOf() < totalPages
 })
+
+function updateKeyword() {
+   let queryFunction;
+   if(searchTerm.value === '' || searchTerm.value.length === 0){
+      queryFunction = AuctionService.getItem(props.perPage, props.page)
+   }else if(!searchWithPrice.value){
+      queryFunction = AuctionService.getItemByKeyword(searchTerm.value, props.perPage, props.page)
+   }else if(!isNaN(Number(searchTerm.value))){
+      queryFunction = AuctionService.getItemLessThanKeyword(Number(searchTerm.value), props.perPage, props.page)
+   }else{
+      queryFunction = AuctionService.getItem(props.perPage, props.page)
+   }
+   queryFunction
+      .then((res: AxiosResponse<IAuctionItem[]>) => {
+         items.value = res.data as IAuctionItem[]
+         totalItem.value = res.headers['x-total-count']
+         console.log('total event', totalItem.value)
+      })
+      .catch(() => {
+         router.push({name: 'network-error'})
+      })
+}
 
 AuctionService.getItem()
    .then((res: AxiosResponse<IAuctionItem[]>) => {
@@ -60,14 +83,17 @@ onBeforeRouteUpdate((to, from, next) => {
    <main>
       <p class="text-2xl px-5 py-3 font-bold text-amber-500">Auction for good</p>
       <div class="my-5">
-         <SearchBar v-model:search-term="searchTerm" />
+         <SearchBar v-model:search-term="searchTerm" @input='updateKeyword()'/>
+         <div class="w-5/12 mx-auto">
+            <input type='checkbox' v-model='searchWithPrice' /> Search With Price
+         </div>
       </div>
 
       <div class="grid w-5/6 gap-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 mx-auto py-4">
          <ItemCard v-for="item in items" :item="item" :key="item.id" />
       </div>
 
-      <div class="pagination">
+      <div class="mx-auto w-1/6" >
          <RouterLink
             :to="{ name: 'item-list', query: { page: page - 1, perPage: itemPerPage.toString() } }"
             rel="prev"

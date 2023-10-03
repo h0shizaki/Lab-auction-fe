@@ -18,4 +18,12 @@ const getItemById = (id: number): Promise<AxiosResponse<IAuctionItem>> => {
    return apiClient.get<IAuctionItem>(`/items/${id}`)
 }
 
-export default { getItem, getItemById }
+const getItemByKeyword = (keyword: string, perPage: number = 4, page: number = 1): Promise<AxiosResponse<IAuctionItem[]>> => {
+   return apiClient.get<IAuctionItem[]>(`/items?_limit=${perPage}&_page=${page}&title=${keyword}`)
+}
+
+const getItemLessThanKeyword = (keyword: number, perPage: number = 4, page: number = 1): Promise<AxiosResponse<IAuctionItem[]>> => {
+   return apiClient.get<IAuctionItem[]>(`/items?_limit=${perPage}&_page=${page}&price=${keyword}`)
+}
+
+export default { getItem, getItemById, getItemByKeyword, getItemLessThanKeyword }

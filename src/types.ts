@@ -7,7 +7,8 @@ export interface IAuctionItem {
    date: string
    location: string
    image: string
-   bids: Array<IBid>
+   ownBids: Array<IBid>
+   successBid: IBid
 }
 
 export interface IBid {
@@ -15,4 +16,5 @@ export interface IBid {
    owner: string
    amount: number
    date: string
+   auctionItem: IAuctionItem
 }
